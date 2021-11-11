@@ -1,134 +1,44 @@
-$(function() {
-  var topBtn = $('#pageTop');
-  topBtn.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
-  });
-    topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 1000);
-    return false;
-    });
-});
+let scene, camera, renderer;
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(
+    55,
+    window.innerWidth / window.innerHeight,
+    45,
+    30000
+  );
+  camera.position.set(-900, -200, -900);
+  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+  let controls = new THREE.OrbitControls(camera);
+  controls.addEventListener("change", renderer);
+  controls.minDistance = 500;
+  controls.maxDistance = 1500;
 
+  let materialArray = [];
+  let texture_ft = new THREE.TextureLoader().load("arid2_ft.jpg");
+  let texture_bk = new THREE.TextureLoader().load("arid2_bk.jpg");
+  let texture_up = new THREE.TextureLoader().load("arid2_up.jpg");
+  let texture_dn = new THREE.TextureLoader().load("arid2_dn.jpg");
+  let texture_rt = new THREE.TextureLoader().load("arid2_rt.jpg");
+  let texture_lf = new THREE.TextureLoader().load("arid2_lf.jpg");
 
-$('a[href*="#"]')
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_bk }));
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_up }));
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_dn }));
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_rt }));
+  materialArray.push(new THREE.MeshBasicMaterial({ map: texture_lf }));
 
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) {
-            return false;
-          } else {
-            $target.attr('tabindex','-1');
-            $target.focus();
-          };
-        });
-      }
-    }
-  });
-
-
-  
-
-$(function () {
-
-  var $array_1 = [];
-  var $array_2 = [];
-  var $position = 1.3;
-  var $classArray = [];
-
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�汎�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  //var $classArray = [$(".p-ani_"+1), $(".p-ani_2")];
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�� pushﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  // for (var i = 1; i <= 6; i++) {
-  //   $classArray.push($(".p-ani-fadeinup_" + i));
-  //   $(".p-ani-fadeinup_" + i).css("visibility", "hidden");
-  // }
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�杷orﾃｦ窶凪｡ﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  /*for (var i in $hoge[index]) {}*/
-
-
-  //classArrayﾄδ�ｫﾄ�堋ｯﾄθ陳ｩﾄ�堋ｹﾃ･ﾂ青催ｨﾂｿﾂｽﾃ･ﾂ� 
-  $classArray.push($(".p-fadeinup"));
-  $(".p-fadeinup").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadein"));
-  $(".p-fadein").css("visibility", "hidden");
-
-  $classArray.push($(".p-width"));
-  $(".p-width").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinblur"));
-  $(".p-fadeinblur").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinscale"));
-  $(".p-fadeinscale").css("visibility", "hidden");
-
-  $classArray.push($(".p-height"));
-  $(".p-height").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinleft"));
-  $(".p-fadeinleft").css("visibility", "hidden");
-
-
-
-  //classArrayﾄδ�ｮﾃｩ窶ｦﾂ催･ﾋ�氾･ﾋ��ﾃ､ﾂｻﾂ｣ﾃ･窶ｦﾂ･
-  for (var i in $classArray) {
-    $.each($classArray[i], function (index, element) {
-      $array_1.push(element);
-    });
-    $array_2.push($array_1);
-    $array_1 = [];
-  }
-
-
-  //CSS Animation
-  $(window).on("load scroll", function () {
-    for (var i in $classArray) {
-
-      $.each($classArray[i], function (index, element) {
-        // console.log(element);
-        aniFunc($(this), index, i);
-      });
-    }
-  });
-
-  function aniFunc($target, junban, type) {
-    var windowHeight = $(window).height(),
-      topWindow = $(window).scrollTop(),
-      adjustHeight = (windowHeight / $position).toFixed(0),
-      targetPosition;
-
-    $target.each(function () {
-      targetPosition = $target.offset().top;
-
-      if (topWindow > targetPosition - adjustHeight) {
-        if (type == 0) { $($array_2[type][junban]).addClass("p-ani-fadeInUp"); } else if (type == 1) { $($array_2[type][junban]).addClass("p-ani-fadeIn"); } else if (type == 2) { $($array_2[type][junban]).addClass("p-ani-width"); } else if (type == 3) { $($array_2[type][junban]).addClass("p-ani-fadeInBlur"); } else if (type == 4) { $($array_2[type][junban]).addClass("p-ani-fadeInScale"); } else if (type == 5) { $($array_2[type][junban]).addClass("p-ani-height"); } else if (type == 6) { $($array_2[type][junban]).addClass("p-ani-fadeInLeft"); }
-
-      }
-    });
-  }
-});
+  for (let i = 0; i < 6; i++) materialArray[i].side = THREE.BackSide;
+  let skyboxGeo = new THREE.BoxGeometry(10000, 10000, 10000);
+  let skybox = new THREE.Mesh(skyboxGeo, materialArray);
+  scene.add(skybox);
+  animate();
+}
+function animate() {
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+}
+init();
