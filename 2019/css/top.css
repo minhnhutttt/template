@@ -1,0 +1,190 @@
+/* Utilities
+---------------------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+  .u-sp {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .u-pc {
+    display: none !important;
+  }
+}
+
+.c-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header
+---------------------------------------------------------------- */
+.c-header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-header__bar {
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 35px 10px 70px;
+}
+
+.c-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.c-header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-header__menu > li > a {
+  display: block;
+  font-size: 18px;
+  color: #010101;
+  padding: 0 8px;
+  letter-spacing: 0.15em;
+}
+
+.c-header__tel {
+  padding: 0 20px;
+}
+
+.c-header__mail a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ec6515;
+  width: 245px;
+  height: 50px;
+  border-radius: 35px;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 0.15em;
+}
+
+.c-header__mail a i {
+  margin-right: 3px;
+}
+
+/* KV
+---------------------------------------------------------------- */
+.c-kv__cont {
+  padding-top: 120px;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+}
+
+.c-kv__catch {
+  padding-top: 120px;
+  padding-left: 20px;
+}
+
+/* Intro
+---------------------------------------------------------------- */
+.c-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-intro__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 95px;
+  margin-top: 90px;
+}
+
+.c-intro__ttl {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 20px;
+}
+
+.c-intro__txt {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 20px;
+}
+
+.c-intro__txt span.is-small {
+  margin-top: 15px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.c-intro__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 320px;
+  height: 64px;
+  background-color: #149ed1;
+  font-size: 23px;
+  color: #fff;
+  letter-spacing: 0.15em;
+  border-radius: 35px;
+}
+
+.c-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#149ed1), color-stop(#374c95), to(#149ed1));
+  background-image: -webkit-linear-gradient(left, #149ed1, #374c95, #149ed1);
+  background-image: linear-gradient(to right, #149ed1, #374c95, #149ed1);
+  color: #fff;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 0.35em;
+}
