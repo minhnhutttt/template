@@ -21,6 +21,34 @@
     padding: 0 20px;
 }
 
+.c-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-image: linear-gradient(to right,#149ed1, #374c95, #149ed1);
+    color: #fff;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 0.35em;
+}
+
+.c-btn {
+    display: flex;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        background-color: #149ed1;
+        font-size: 23px;
+        color: #fff;
+        letter-spacing: 0.15em;
+        padding: 0 68px;
+        border-radius: 35px;
+    }
+}
+
 /* Header
 ---------------------------------------------------------------- */
 .c-header {
@@ -97,6 +125,7 @@
 ---------------------------------------------------------------- */
 .c-intro {
     display: flex;
+    background-color: #fff;
     &__main {
         flex: 1;
         margin-left: 95px;
@@ -120,28 +149,175 @@
             line-height: 1.4;
         }
     }
-    &__btn {
+}
+
+/* Planning
+---------------------------------------------------------------- */
+
+.c-planning {
+    margin-bottom: 70px;
+    &__ttl {
+        font-size: 24px;
+        text-align: center;
+        line-height: 1.6;
+        margin-top: 25px;
+    }
+    &__articles {
+        margin-top: 20px;
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__article {
+        width: 32.08%;
+        background-color: #fff;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+        margin-right: 1.88%;
+        margin-bottom: 25px;
+        @media screen and (min-width: 1025px) {
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+        &--main {
+            padding: 38px 15px 35px;
+        }
+        &--ttl {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 600;
+        }
+        &--txt {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-top: 25px;
+        }
+    }
+    &__btn {
+        margin-top: 15px;
         justify-content: center;
-        width: 320px;
-        height: 64px;
-        background-color: #149ed1;
-        font-size: 23px;
-        color: #fff;
-        letter-spacing: 0.15em;
-        border-radius: 35px;
     }
 }
 
-.c-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    background-image: linear-gradient(to right,#149ed1, #374c95, #149ed1);
-    color: #fff;
-    font-weight: 800;
-    font-size: 32px;
-    letter-spacing: 0.35em;
+/* Contact Us
+---------------------------------------------------------------- */
+.c-contact-us {
+    background-color: #fff;
+    margin-bottom: 80px;
+    &__container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        height: 290px;
+        position: relative;
+        z-index: 20;
+    }
+    &__content {
+        width: 100%;
+        max-width: 910px;
+        margin: 0 auto;
+        padding-top: 55px;
+    }
+    &__txt {
+        font-size: 28px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__btn {
+        width: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 75px;
+        &.is-tel {
+            background-color: #0e2467;
+            padding-top: 18px;
+            span {
+                font-size: 13px;
+            }
+        }
+        &.is-consultation {
+            background-color: #ec6515;
+            font-size: 24px;
+        }
+        &+& {
+            margin-left: 30px;
+        }
+    }
+    &__map,
+    &__man {
+        position: absolute;
+        z-index: -1;
+    }
+    &__map {
+        top: 5px;
+        left: 0;
+    }
+    &__man {
+        right: 40px;
+        bottom: 0;
+    }
+}
+
+/* Service
+---------------------------------------------------------------- */
+
+.c-service {
+    margin-bottom: 70px;
+    &__ttl {
+        font-size: 24px;
+        text-align: center;
+        line-height: 1.6;
+        margin-top: 25px;
+    }
+    &__articles {
+        margin-top: 35px;
+    }
+    &__article {
+        background-color: #fff;
+        padding: 20px;
+        display: flex;
+        position: relative;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+        margin-bottom: 40px;
+        &--main {
+            margin-left: 60px;
+            padding-top: 10px;
+        }
+        &--ttl {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #374c95;
+        }
+        &--txt {
+            padding-top: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            letter-spacing: 0.15em;
+        }
+        &--btn {
+            position: absolute;
+            bottom: 25px;
+            right: 30px;
+            a {
+                padding: 0 40px;
+            }
+        }
+        &--list {
+            max-width: 440px;
+            margin: 25px auto 0;
+            background-color: #def6ff;
+            padding: 10px 0 10px 35px;
+            letter-spacing: 0.15em;
+        }
+    }
 }

@@ -19,6 +19,51 @@
   padding: 0 20px;
 }
 
+.c-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#149ed1), color-stop(#374c95), to(#149ed1));
+  background-image: -webkit-linear-gradient(left, #149ed1, #374c95, #149ed1);
+  background-image: linear-gradient(to right, #149ed1, #374c95, #149ed1);
+  color: #fff;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: 0.35em;
+}
+
+.c-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 64px;
+  background-color: #149ed1;
+  font-size: 23px;
+  color: #fff;
+  letter-spacing: 0.15em;
+  padding: 0 68px;
+  border-radius: 35px;
+}
+
 /* Header
 ---------------------------------------------------------------- */
 .c-header {
@@ -119,6 +164,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #fff;
 }
 
 .c-intro__main {
@@ -150,26 +196,108 @@
   line-height: 1.4;
 }
 
-.c-intro__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 320px;
-  height: 64px;
-  background-color: #149ed1;
-  font-size: 23px;
-  color: #fff;
-  letter-spacing: 0.15em;
-  border-radius: 35px;
+/* Planning
+---------------------------------------------------------------- */
+.c-planning {
+  margin-bottom: 70px;
 }
 
-.c-title {
+.c-planning__ttl {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.c-planning__articles {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.c-planning__article {
+  width: 32.08%;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+  margin-right: 1.88%;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1025px) {
+  .c-planning__article:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+.c-planning__article--main {
+  padding: 38px 15px 35px;
+}
+
+.c-planning__article--ttl {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.c-planning__article--txt {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 25px;
+}
+
+.c-planning__btn {
+  margin-top: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Contact Us
+---------------------------------------------------------------- */
+.c-contact-us {
+  background-color: #fff;
+  margin-bottom: 80px;
+}
+
+.c-contact-us__container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 290px;
+  position: relative;
+  z-index: 20;
+}
+
+.c-contact-us__content {
+  width: 100%;
+  max-width: 910px;
+  margin: 0 auto;
+  padding-top: 55px;
+}
+
+.c-contact-us__txt {
+  font-size: 28px;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.c-contact-us__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.c-contact-us__btn {
+  width: 50%;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,12 +307,110 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#149ed1), color-stop(#374c95), to(#149ed1));
-  background-image: -webkit-linear-gradient(left, #149ed1, #374c95, #149ed1);
-  background-image: linear-gradient(to right, #149ed1, #374c95, #149ed1);
-  color: #fff;
-  font-weight: 800;
-  font-size: 32px;
-  letter-spacing: 0.35em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 75px;
+}
+
+.c-contact-us__btn.is-tel {
+  background-color: #0e2467;
+  padding-top: 18px;
+}
+
+.c-contact-us__btn.is-tel span {
+  font-size: 13px;
+}
+
+.c-contact-us__btn.is-consultation {
+  background-color: #ec6515;
+  font-size: 24px;
+}
+
+.c-contact-us__btn + .c-contact-us__btn {
+  margin-left: 30px;
+}
+
+.c-contact-us__map, .c-contact-us__man {
+  position: absolute;
+  z-index: -1;
+}
+
+.c-contact-us__map {
+  top: 5px;
+  left: 0;
+}
+
+.c-contact-us__man {
+  right: 40px;
+  bottom: 0;
+}
+
+/* Service
+---------------------------------------------------------------- */
+.c-service {
+  margin-bottom: 70px;
+}
+
+.c-service__ttl {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+
+.c-service__articles {
+  margin-top: 35px;
+}
+
+.c-service__article {
+  background-color: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 0 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+.c-service__article--main {
+  margin-left: 60px;
+  padding-top: 10px;
+}
+
+.c-service__article--ttl {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #374c95;
+}
+
+.c-service__article--txt {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.15em;
+}
+
+.c-service__article--btn {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+}
+
+.c-service__article--btn a {
+  padding: 0 40px;
+}
+
+.c-service__article--list {
+  max-width: 440px;
+  margin: 25px auto 0;
+  background-color: #def6ff;
+  padding: 10px 0 10px 35px;
+  letter-spacing: 0.15em;
 }
