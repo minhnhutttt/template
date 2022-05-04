@@ -57,21 +57,6 @@ $(function () {
   var $position = 1.3;
   var $classArray = [];
 
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�汎�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  //var $classArray = [$(".p-ani_"+1), $(".p-ani_2")];
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�� pushﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  // for (var i = 1; i <= 6; i++) {
-  //   $classArray.push($(".p-ani-fadeinup_" + i));
-  //   $(".p-ani-fadeinup_" + i).css("visibility", "hidden");
-  // }
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�杷orﾃｦ窶凪｡ﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  /*for (var i in $hoge[index]) {}*/
-
-
-  //classArrayﾄδ�ｫﾄ�堋ｯﾄθ陳ｩﾄ�堋ｹﾃ･ﾂ青催ｨﾂｿﾂｽﾃ･ﾂ� 
   $classArray.push($(".p-fadeinup"));
   $(".p-fadeinup").css("visibility", "hidden");
 
@@ -94,8 +79,6 @@ $(function () {
   $(".p-fadeinleft").css("visibility", "hidden");
 
 
-
-  //classArrayﾄδ�ｮﾃｩ窶ｦﾂ催･ﾋ�氾･ﾋ��ﾃ､ﾂｻﾂ｣ﾃ･窶ｦﾂ･
   for (var i in $classArray) {
     $.each($classArray[i], function (index, element) {
       $array_1.push(element);
@@ -110,7 +93,6 @@ $(function () {
     for (var i in $classArray) {
 
       $.each($classArray[i], function (index, element) {
-        // console.log(element);
         aniFunc($(this), index, i);
       });
     }
@@ -131,4 +113,33 @@ $(function () {
       }
     });
   }
+});
+
+$(document).ready(function () {
+  $(".toggle").on("click", function () {
+    $(this).toggleClass("is-active");
+    var menu = $(".c-header__menu");
+    menu.slideToggle("is-active");
+    $("body").toggleClass("is-active");
+  });
+
+  $(".at-drop-down").on("click", function (e) {
+    if (Modernizr.mq("screen and (max-width:1024px)")) {
+      e.preventDefault();
+      $(this).next($(".menu-sub")).slideToggle();
+    }
+  });
+
+  $(window).resize(function () {
+    $(".menu-sub").attr("style", "");
+  });
+
+  $("#mvSlider").slick({
+    infinite: true,
+    fade: true,
+    speed: 700,
+    autoplay: false,
+    dots: true,
+    arrows: false,
+  });
 });

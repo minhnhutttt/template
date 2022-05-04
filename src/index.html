@@ -12,18 +12,163 @@
 
 
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/top.css" type="text/css">
   <link rel="stylesheet" href="css/master.css" type="text/css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="css/top.css" type="text/css">
 </head>
 
 <body>
 
 <header id="header">
-
+  <div class="c-header">
+    <div class="c-header__logo">
+      <a href="index.html" class="c-logo">Rogyx</a>
+    </div>
+    <div class="c-header__menu">
+      <ul class="c-menu">
+        <li>
+          <a href="#">サービス紹介</a>
+        </li>
+        <li>
+          <a href="#">企業情報</a>
+          <div class="c-menu-sub">
+            <div class="c-menu-sub-title">
+              企業情報
+            </div>
+            <ul>
+              <li>
+                <a href="">
+                  ご挨拶
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  会社概要
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  基本理念
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  アクセス・拠点
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  SDGsについて
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  採用情報
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">採用情報</a>
+        </li>
+        <li>
+          <a href="#">お問い合わせ</a>
+        </li>
+        <li>
+          <a href="#">アクセス</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
 
-
+<main>
+  <div class="wrapper home-bg">
+    <div class="c-mv">
+      <div class="c-location">
+        <img src="./images/icon-location.png" alt="">
+        <span class="c-location__txt">
+          東京都千代田区神田 →［Google Map]　
+        </span>
+      </div>
+      <div class="c-mv__info">
+        <h2 class="c-mv__info--ttl"><img src="./images/corporate-info.png" alt="Corporate Info"></h2>
+        <p class="c-mv__info--txt">
+          私たちは現場の確認を第一に考えて、実績を <br>
+          積み上げて参りました。
+        </p>
+      </div>
+      <div class="c-mv__slider" id="mvSlider">
+        <div>
+          <div class="c-mv__slider--item">
+            <img src="./images/photo.jpg" alt="">
+          </div>
+        </div>
+        <div>
+          <div class="c-mv__slider--item">
+            <img src="./images/photo.jpg" alt="">
+          </div>
+        </div>
+        <div>
+          <div class="c-mv__slider--item">
+            <img src="./images/photo.jpg" alt="">
+          </div>
+        </div>
+        <div>
+          <div class="c-mv__slider--item">
+            <img src="./images/photo.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="c-mv__news">
+        <div class="c-mv__news--item">
+          <p class="c-mv__news--ttl">※重要なお知らせ</p>
+          <p class="c-mv__news--txt">※コロナによる当社業務への影響についてテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <section class="sec-service">
+      <div class="c-service">
+        <h3 class="c-service__ttl">サービス紹介</h3>
+        <div class="c-service__intro">
+          <img src="./images/service-introduction.png" alt="Service Introduction">
+        </div>
+        <div class="c-service__articles">
+          <div class="c-service__article">
+            <div class="c-service__article--thumb">
+              <div class="c-service__article--thumb--img">
+                <img src="./images/service-article-01.png" alt="">
+              </div>
+            </div>
+            <div class="c-service__article--main">
+              <h5 class="c-service__article--ttl">商業系建築物</h5>
+              <p class="c-service__article-txt">テキストテキストテキストテキストテキストテキスト</p>
+              <div class="c-service__article--btn">
+                <a href="#">More</a>
+              </div>
+            </div>
+          </div>
+          <div class="c-service__article">
+            <div class="c-service__article--thumb">
+              <div class="c-service__article--thumb--img">
+                <img src="./images/service-article-02.png" alt="">
+              </div>
+            </div>
+            <div class="c-service__article--main">
+              <h5 class="c-service__article--ttl">住宅系建築物</h5>
+              <p class="c-service__article-txt">テキストテキストテキストテキストテキストテキスト</p>
+              <div class="c-service__article--btn">
+                <a href="#">More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
 
 <!--Footer-->
 <footer id="footer">
@@ -32,6 +177,7 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="js/script.js"></script>
 
 </html>
