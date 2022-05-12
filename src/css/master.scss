@@ -24,11 +24,11 @@ body{
   height:auto;
   width: 100%;
   font-size:14px;
-  color:#202020;
+  color:#000;
   min-width: 320px;
   line-height:160%;
   /*スマホ対応*/
-   font-family: 'Noto Serif JP', serif;
+   font-family: HiraW7, 'Noto Serif JP', serif;
   -webkit-text-size-adjust:100%;
   text-size-adjust:100%;
   overflow-y: scroll; /*ローディングのガタツキ防止*/
