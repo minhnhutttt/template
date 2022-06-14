@@ -1,134 +1,48 @@
-$(function() {
-  var topBtn = $('#pageTop');
-  topBtn.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
-  });
-    topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 1000);
-    return false;
-    });
-});
+var scene, camera, renderer, points, line, amountAdd = 0.01;
 
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(75, 640 / 480, 0.1, 1000);
 
-$('a[href*="#"]')
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(640, 480);
+  document.body.appendChild(renderer.domElement);
+  camera.position.z = 9;
 
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) {
-            return false;
-          } else {
-            $target.attr('tabindex','-1');
-            $target.focus();
-          };
-        });
-      }
-    }
-  });
-
-
-  
-
-$(function () {
-
-  var $array_1 = [];
-  var $array_2 = [];
-  var $position = 1.3;
-  var $classArray = [];
-
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�汎�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  //var $classArray = [$(".p-ani_"+1), $(".p-ani_2")];
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�� pushﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  // for (var i = 1; i <= 6; i++) {
-  //   $classArray.push($(".p-ani-fadeinup_" + i));
-  //   $(".p-ani-fadeinup_" + i).css("visibility", "hidden");
-  // }
-
-  // ﾃｩ窶ｦﾂ催･ﾋ�杷orﾃｦ窶凪｡ﾄ�堋ｵﾄθ陳ｳﾄθ停汎θ陳ｫ
-  /*for (var i in $hoge[index]) {}*/
-
-
-  //classArrayﾄδ�ｫﾄ�堋ｯﾄθ陳ｩﾄ�堋ｹﾃ･ﾂ青催ｨﾂｿﾂｽﾃ･ﾂ� 
-  $classArray.push($(".p-fadeinup"));
-  $(".p-fadeinup").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadein"));
-  $(".p-fadein").css("visibility", "hidden");
-
-  $classArray.push($(".p-width"));
-  $(".p-width").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinblur"));
-  $(".p-fadeinblur").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinscale"));
-  $(".p-fadeinscale").css("visibility", "hidden");
-
-  $classArray.push($(".p-height"));
-  $(".p-height").css("visibility", "hidden");
-
-  $classArray.push($(".p-fadeinleft"));
-  $(".p-fadeinleft").css("visibility", "hidden");
-
-
-
-  //classArrayﾄδ�ｮﾃｩ窶ｦﾂ催･ﾋ�氾･ﾋ��ﾃ､ﾂｻﾂ｣ﾃ･窶ｦﾂ･
-  for (var i in $classArray) {
-    $.each($classArray[i], function (index, element) {
-      $array_1.push(element);
-    });
-    $array_2.push($array_1);
-    $array_1 = [];
+  points = [];
+  for (var i = -10; i < 10.1; i += 0.1) {
+    points.push([i, Math.sin(i), 0]);
   }
 
+  console.log(points)
 
-  //CSS Animation
-  $(window).on("load scroll", function () {
-    for (var i in $classArray) {
+  line = new MeshLine();
+  line.setPoints(points.flat());
 
-      $.each($classArray[i], function (index, element) {
-        // console.log(element);
-        aniFunc($(this), index, i);
-      });
-    }
+  var material = new MeshLineMaterial({
+    color: new THREE.Color(0xffff00),
+    lineWidth: 0.1,
+    // dashArray: 0.1,
+    // dashRatio: 0.1
   });
 
-  function aniFunc($target, junban, type) {
-    var windowHeight = $(window).height(),
-      topWindow = $(window).scrollTop(),
-      adjustHeight = (windowHeight / $position).toFixed(0),
-      targetPosition;
+  material.transparent = true;
 
-    $target.each(function () {
-      targetPosition = $target.offset().top;
+  mesh = new THREE.Mesh(line, material);
+  scene.add(mesh);
 
-      if (topWindow > targetPosition - adjustHeight) {
-        if (type == 0) { $($array_2[type][junban]).addClass("p-ani-fadeInUp"); } else if (type == 1) { $($array_2[type][junban]).addClass("p-ani-fadeIn"); } else if (type == 2) { $($array_2[type][junban]).addClass("p-ani-width"); } else if (type == 3) { $($array_2[type][junban]).addClass("p-ani-fadeInBlur"); } else if (type == 4) { $($array_2[type][junban]).addClass("p-ani-fadeInScale"); } else if (type == 5) { $($array_2[type][junban]).addClass("p-ani-height"); } else if (type == 6) { $($array_2[type][junban]).addClass("p-ani-fadeInLeft"); }
+  setInterval(()=> {
+    amountAdd *= -1
+  }, 2000)
+  animate();
+}
 
-      }
-    });
-  }
-});
+function animate() {
+
+  // points = points.map((point) => [point[0], point[1] * (1 + amountAdd), point[2]]);
+
+  // line.setPoints(points.flat());
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+}
