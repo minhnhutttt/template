@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+// --------------------------------------------------
+// ----------------------- Header ---------------------------
+// --------------------------------------------------
+
+.c-header {
+    &__bar {
+        background-color: #ec198b;
+        height: 48px;
+        padding: 9px 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &--menu {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            li {
+                & + li {
+                    height: 100%;
+                    border-left: 1px solid #fff;
+                }
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    height: 100%;
+                    font-size: 18px;
+                    font-weight: medium;
+                    padding: 0 34px;
+                    line-height: 1;
+                    span {
+                        & + span {
+                            margin-left: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__main {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        height: 135px;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+        margin-left: 37px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                a {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
