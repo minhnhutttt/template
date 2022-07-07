@@ -145,6 +145,8 @@ a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     *behavior: url(/scripts/boxsizing.htc);
+    min-height: 0;
+    min-width: 0;
 }
 
 /* 全体構成

@@ -11,7 +11,7 @@
   <meta name="keywords" content="">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/top.css" type="text/css">
     <link rel="stylesheet" href="css/mp.css" type="text/css">
 </head>
@@ -43,7 +43,7 @@
                         <img src="./images/mp/logo.png" alt="marketplace">
                     </a>
                 </div>
-                <div class="c-header__menu">
+                <div class="c-header__menu" id="menu">
                     <ul>
                         <li>
                             <a href="#">見つける</a>
@@ -63,6 +63,11 @@
                     <input class="c-search__input" type="text" placeholder="コレクション、アイテム、アカウントを探す">
                     <a href="#" class="c-search__btn">探す</a>
                 </div>
+            </div>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
             </div>
         </div>
     </div>
@@ -89,6 +94,7 @@
     <div class="c-main">
         <div class="c-tabs">
             <div class="all">All</div>
+            <div class="c-tabs__wrap">
             <div class="tab-arrow tab-arrow-prev"><img src="./images/mp/arrow.jpg" alt=""></div>
             <div class="c-tabs__menu">
                 <div><p class="c-tabs__menu--item">カテゴリ1</p></div>
@@ -102,9 +108,10 @@
                 <div><p class="c-tabs__menu--item">カテゴリ9</p></div>
             </div>
             <div class="tab-arrow tab-arrow-next"><img src="./images/mp/arrow.jpg" alt=""></div>
+            </div>
         </div>
         <div class="c-articles">
-            <div class="c-article">
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -128,8 +135,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -153,8 +160,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -178,8 +185,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -203,8 +210,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -228,8 +235,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -253,8 +260,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -278,8 +285,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -303,8 +310,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -328,8 +335,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -353,8 +360,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -378,8 +385,8 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
-            <div class="c-article">
+            </a>
+            <a href="#" class="c-article">
                 <div class="c-article__thumb">
                     <div class="c-article__status">
                         <div class="c-article__status--item">
@@ -403,7 +410,7 @@
                         <p class="c-article__detail--price">300 EHT</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </main>
@@ -470,7 +477,7 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/script.js"></script>
 
 <script>
@@ -495,7 +502,8 @@
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    centerMode: true,
+                    centerMode: false,
+                    variableWidth: false,
                     centerPadding: '40px',
                     slidesToShow: 1
                 }
@@ -514,30 +522,31 @@
         prevArrow: $('.tab-arrow-prev'),
         responsive: [
             {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
+                breakpoint: 1281,
+                settings: {
+                    slidesToShow: 5,
+                }
             },
             {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+                }
             },
             {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+            breakpoint: 769,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
             }
         ]
-        });
+    });
+
+    $(".hamburger-lines").on('click', function() {
+        $(this).toggleClass("active");
+        $("#menu").slideToggle("active");
+    });
 
 </script>
 
