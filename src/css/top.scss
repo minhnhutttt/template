@@ -1,1 +1,82 @@
 @charset "utf-8";
+
+// ---------- Component ---------------
+
+.c-container {
+    width: 100%;
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hamburger {
+    margin: 21px 18px;
+    border: 2px solid #62FFFF;
+    padding: 10px 7px;
+}
+.hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 43px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .line {
+        display: block;
+        height: 5px;
+        width: 100%;
+        border-radius: 10px;
+        background: #62FFFF;
+    }
+    .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    &.is-active {
+        .line1 {
+            transform: rotate(45deg);
+        }
+        .line2 {
+            transform: scaleY(0);
+        }
+        .line3 {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.wrapper {
+    min-height: 5000px;
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+// ---------- Header ---------------
+
+.c-header {
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 22px;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        padding-top: 48px;
+    }
+    &__line {
+        position: absolute;
+        top: 50px;
+    }
+}
