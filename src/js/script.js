@@ -48,10 +48,15 @@ $('a[href*="#"]')
   });
 
 $(document).ready(function(){
-  var hamburger = $(".hamburger");
+  var hamburger = $(".menu-toggle");
   var menu = $(".c-menu");
+  var footerHamburger = $(".footer-menu-toggle");
+  var footerMenu = $(".c-footer__menu");
   hamburger.click(function() {
     menu.fadeToggle();
-    console.log(1)
+  })
+  footerHamburger.click(function() {
+    footerMenu.fadeIn();
+    $(this).fadeOut();
   })
 })
