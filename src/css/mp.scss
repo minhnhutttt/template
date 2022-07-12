@@ -349,18 +349,20 @@
 .c-tabs {
     width: 100%;
     max-width: 1200px;
-    margin: 75px auto 0;
+    margin: 45px auto 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     @media screen and (max-width: 768px) {
         margin-top: 10px;
         display: block;
     }
     &__wrap {
+        width: calc(100% - 160px);
         display: flex;
         align-items: center;
         @media screen and (max-width: 768px) {
+            width: 100%;
             margin-top: 20px;
             padding: 0 10px;
         }
@@ -370,6 +372,7 @@
             font-size: 24px;
             letter-spacing: -0.05em;
             text-align: center;
+            cursor: pointer;
             @media screen and (max-width: 1280px) {
                 padding: 0 20px;
                 font-size: 20px;
@@ -377,6 +380,9 @@
             @media screen and (max-width: 900px) {
                 padding: 0 10px;
                 font-size: 14px;
+            }
+            @media screen and (max-width: 440px) {
+                font-size: 12px;
             }
         }
     }
@@ -395,8 +401,13 @@
         @media screen and (max-width: 1024px) {
             width: 100px;
             height: 44px;
-            margin: 0 auto;
             font-size: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            margin: 0 auto;
+            width: 80px;
+            height: 34px;
+            font-size: 16px;
         }
     }
     .tab-arrow {
