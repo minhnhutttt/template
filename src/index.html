@@ -9,18 +9,76 @@
   <title></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-
-
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/modern-normalize.css" type="text/css">
   <link rel="stylesheet" href="css/top.css" type="text/css">
-  <link rel="stylesheet" href="css/master.css" type="text/css">
-
+  <script src="https://kit.fontawesome.com/8956f9e7ea.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header id="header">
-
+  <div class="c-header">
+    <div class="c-header__wrap">
+      <a href="#" class="c-header__logo">
+        <img src="./images/logo.png" alt="MINT">
+      </a>
+      <div class="menu-toggle hamburger">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+      </div>
+      <div class="c-header__inner c-menu">
+        <div class="menu-toggle hamburger">
+          <div class="hamburger-lines is-active">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        </div>
+        <div class="c-header__modal">
+          <div class="c-header__menu">
+            <ul>
+              <li>
+                <a href="#">マーケットプレイス</a>
+              </li>
+              <li>
+                <a href="#">コレクション</a>
+              </li>
+              <li>
+                <a href="#">NFTを作る</a>
+              </li>
+              <li>
+                <a href="#">使い方</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-header__search">
+            <span class="c-header__search--icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" placeholder="コレクション、アイテム、アカウントを探す">
+          </div>
+          <div class="c-header__function">
+            <div class="c-header__function--block">
+              <a href="#" class="c-header__function--login">
+                <p class="c-header__function--login-icon"><img src="./images/icon-login.png" alt=""></p>
+                <p class="c-header__function--login-txt">ログイン</p>
+              </a>
+              <a href="" class="c-header__function--signup">新規登録</a>
+            </div>
+            <div class="c-header__function--block">
+              <a href="" class="c-header__function--wallet"><img src="./images/icon-wallet.png" alt=""></a>
+            </div>
+            <div class="c-header__function--block">
+              <a href="" class="c-header__function--lang">日本語</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 
