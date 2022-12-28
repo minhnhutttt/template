@@ -1,0 +1,734 @@
+@charset "UTF-8";
+/* 
+RESET - ADAPTED FROM MEYER RESET
+URL - http://meyerweb.com/eric/tools/css/reset/
+LICENSE - PUBLIC DOMAIN
+*/
+/* RESET
+----------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+a, abbr, acronym, address, applet, article, aside, audio,
+b, big, blockquote, body, caption, canvas, center, cite, code,
+dd, del, details, dfn, dialog, div, dl, dt, em, embed,
+fieldset, figcaption, figure, form, footer,
+header, hgroup, h1, h2, h3, h4, h5, h6, html,
+i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, output, p, pre, q, ruby,
+s, samp, section, main, small, span, strike, strong, sub, summary, sup,
+tt, table, tbody, textarea, tfoot, thead, time, tr, th, td,
+u, ul, var, video {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/scripts/boxsizing.htc);
+}
+
+/* 全体構成
+---------------------------------------------------------------- */
+html {
+  font-size: 62.5%;
+  /*ベースを10pxにしています*/
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  font-size: 14px;
+  color: #202020;
+  min-width: 320px;
+  line-height: 160%;
+  /*スマホ対応*/
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  overflow-y: scroll;
+  /*ローディングのガタツキ防止*/
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  line-height: 0px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+a {
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper {
+  background-color: #1e88cf;
+}
+
+.c-container {
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-container {
+    max-width: 520px;
+  }
+}
+
+.c-header__wrap {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 28px 0 160px;
+}
+
+@media screen and (max-width: 1024px) {
+  .c-header__wrap {
+    padding: 0 20px 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-header__wrap {
+    height: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .c-header__logo {
+    padding-top: 37px;
+  }
+}
+
+.c-header__logo a img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-header__logo a img {
+    max-width: 180px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .c-header__btn {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-header__btn {
+    margin-left: 20px;
+  }
+}
+
+.c-header__btn img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-header__btn img {
+    max-width: 120px;
+  }
+}
+
+.c-kv {
+  padding: 0 20px;
+  background-image: url(../images/mv-bg.png);
+}
+
+.c-kv__wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 95px 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-kv__wrap {
+    padding: 50px 0 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .c-kv__col {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .c-kv__main {
+    padding: 0 10px;
+  }
+}
+
+.c-kv__ttl img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-kv__ttl img {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.c-kv__txt {
+  margin-top: 40px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 1024px) {
+  .c-kv__txt {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-kv__txt {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+
+.c-kv__img01 {
+  padding: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .c-kv__img01 {
+    padding: 0 34px 0 45px;
+  }
+}
+
+.c-kv__img01 img {
+  max-width: 100%;
+}
+
+.c-kv__img02 {
+  padding: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .c-kv__img02 {
+    padding: 40px 12px 40px 35px;
+  }
+}
+
+.c-kv__img02 img {
+  max-width: 100%;
+}
+
+.c-navigation {
+  padding: 85px 0 75px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-navigation {
+    padding: 30px 20px;
+  }
+}
+
+.c-navigation__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 23px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-navigation__wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-navigation__wrap a {
+    width: calc(50% - 10px);
+  }
+}
+
+.c-navigation__wrap a img {
+  max-width: 100%;
+}
+
+.c-content {
+  padding: 80px 0 55px;
+  background-image: url(../images/bg-content.png);
+}
+
+@media screen and (max-width: 768px) {
+  .c-content {
+    padding: 40px 0 20px;
+  }
+}
+
+.c-content.is-popeye {
+  background-image: url(../images/bg-popeye.png);
+}
+
+.c-content.is-olive {
+  background-image: url(../images/bg-olive.png);
+}
+
+.c-content__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__head {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.c-content__head--img {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (min-width: 769px) {
+  .c-content__head--img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__head--img {
+    padding: 15px 15px 40px;
+  }
+}
+
+.c-content__head--img img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .c-content__head--main {
+    width: 50%;
+  }
+}
+
+.c-content__head--logo img {
+  max-width: 100%;
+}
+
+.c-content__head--txt {
+  padding: 30px 5px 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__head--txt {
+    padding: 30px 5px;
+  }
+}
+
+.c-content__head--txt01 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__head--txt01 {
+    font-size: 20px;
+  }
+}
+
+.c-content__head--txt02 {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.7;
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__head--txt02 {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+}
+
+.c-content__imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 27px;
+  width: 100%;
+  max-width: 1800px;
+  padding: 25px 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__imgs {
+    max-width: 540px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+.c-content__img {
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__img {
+    width: calc(50% - 10px);
+  }
+}
+
+.c-content__img img {
+  max-width: 100%;
+}
+
+.c-content__btn {
+  padding: 25px 20px 146px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__btn {
+    padding: 20px 20px 80px;
+  }
+}
+
+.c-content__btn img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-content__btn img {
+    max-width: 260px;
+  }
+}
+
+.c-nft {
+  padding-top: 145px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft {
+    padding-top: 30px;
+  }
+}
+
+.c-nft__ttl {
+  width: 100%;
+  max-width: 872px;
+  height: 122px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 61px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__ttl {
+    max-width: 320px;
+    height: 60px;
+  }
+}
+
+.c-nft__ttl span {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Hiragino Kaku Gothic Pro', serif;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__ttl span {
+    font-size: 24px;
+  }
+}
+
+.c-nft__items {
+  padding: 110px 0 246px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 27px;
+}
+
+@media screen and (max-width: 1024px) {
+  .c-nft__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__items {
+    padding: 60px 0 120px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    gap: 25px;
+  }
+}
+
+.c-nft__item {
+  padding: 52px 10px 38px;
+  width: 25%;
+  background-color: #000443;
+  -webkit-box-shadow: 0 0 18px rgba(208, 218, 253, 0.3);
+          box-shadow: 0 0 18px rgba(208, 218, 253, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+  .c-nft__item {
+    width: calc(50% - 13.5px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__item {
+    width: 100%;
+  }
+}
+
+.c-nft__item--img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 182px;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__item--img {
+    height: 100px;
+  }
+}
+
+.c-nft__item--img img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__item--img img {
+    height: 100%;
+  }
+}
+
+.c-nft__item--ttl {
+  margin: 55px 0 35px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.8;
+  font-family: 'Hiragino Kaku Gothic Pro', serif;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__item--ttl {
+    margin: 30px 0 15px;
+    font-size: 16px;
+  }
+}
+
+.c-nft__item--btn {
+  width: 100%;
+  max-width: 272px;
+  height: 55px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  font-size: 22px;
+  color: #000443;
+  font-weight: bold;
+  border-radius: 27px;
+  font-family: 'Hiragino Kaku Gothic Pro', serif;
+}
+
+@media screen and (max-width: 768px) {
+  .c-nft__item--btn {
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+.c-footer {
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #126da7;
+}
+
+@media screen and (max-width: 768px) {
+  .c-footer {
+    height: 80px;
+  }
+}
+
+.c-footer .copyright {
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Noto Serif JP', serif;
+}
+
+@media screen and (max-width: 768px) {
+  .c-footer .copyright {
+    font-size: 16px;
+  }
+}
