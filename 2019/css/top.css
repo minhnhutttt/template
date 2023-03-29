@@ -171,6 +171,13 @@ body {
   /*ローディングのガタツキ防止*/
 }
 
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  line-height: 0px;
+}
+
 .c-container {
   width: 100%;
   max-width: 1600px;
@@ -332,9 +339,6 @@ body {
 }
 
 .c-pickup__head {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
   padding: 0 0 10px;
 }
 
@@ -378,4 +382,41 @@ body {
   color: #fff;
   font-size: 18px;
   border-radius: 10px;
+}
+
+.c-collection {
+  padding: 110px 0;
+}
+
+.c-collection__head {
+  padding: 0 0 20px;
+}
+
+.c-collection__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -14px;
+}
+
+.c-collection__list--item {
+  width: 25%;
+  padding: 0 14px;
+  margin-bottom: 75px;
+}
+
+.c-collection__list--img {
+  -webkit-box-shadow: 3px 0 15px #dfdfdf;
+          box-shadow: 3px 0 15px #dfdfdf;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.c-collection__list--name {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
 }
