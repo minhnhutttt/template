@@ -393,6 +393,12 @@ img {
           align-items: center;
 }
 
+@media screen and (min-width: 1281px) {
+  .c-header__toggle {
+    display: none;
+  }
+}
+
 .hamburger {
   display: block;
   width: 40px;
