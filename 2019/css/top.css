@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* 
+RESET - ADAPTED FROM MEYER RESET
+URL - http://meyerweb.com/eric/tools/css/reset/
+LICENSE - PUBLIC DOMAIN
+*/
+/* RESET
+----------------------------------------------------------------------------------------------------*/
+a, abbr, acronym, address, applet, article, aside, audio,
+b, big, blockquote, body, caption, canvas, center, cite, code,
+dd, del, details, dfn, dialog, div, dl, dt, em, embed,
+fieldset, figcaption, figure, form, footer,
+header, hgroup, h1, h2, h3, h4, h5, h6, html,
+i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, output, p, pre, q, ruby,
+s, samp, section, main, small, span, strike, strong, sub, summary, sup,
+tt, table, tbody, textarea, tfoot, thead, time, tr, th, td,
+u, ul, var, video {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/scripts/boxsizing.htc);
+}
+
+@font-face {
+  font-family: Hiragino;
+  src: url(../fonts/HiraginoMinchoProW6.otf);
+}
+
+/* 全体構成
+  ---------------------------------------------------------------- */
+html {
+  font-size: 62.5%;
+  /*ベースを10pxにしています*/
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  font-size: 14px;
+  color: #202020;
+  min-width: 320px;
+  line-height: 1.6;
+  /*スマホ対応*/
+  font-family: 'Hiragino', serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  overflow-y: scroll;
+  /*ローディングのガタツキ防止*/
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  line-height: 0px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+a {
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper {
+  background-color: #000;
+}
+
+.c-section {
+  position: relative;
+}
+
+@media screen and (max-width: 769px) {
+  .c-section {
+    height: 80vh;
+  }
+}
+
+.c-section__bg {
+  height: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.c-section__bg img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-section__wrap {
+  position: absolute;
+  inset: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.c-head__title {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 102px;
+  font-weight: 600;
+  line-height: 0.9;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 44px;
+}
+
+@media screen and (max-width: 769px) {
+  .c-head__title {
+    font-size: 51px;
+  }
+}
+
+.c-head__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, #7d3dbb), color-stop(52%, #00166b), color-stop(79%, #2b8398), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #7d3dbb 10%, #00166b 52%, #2b8398 79%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #7d3dbb 10%, #00166b 52%, #2b8398 79%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.8;
+}
+
+.c-head__text p {
+  font-size: 28px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+  .c-head__text p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.c-text p {
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 769px) {
+  .c-text p {
+    font-size: 18px;
+  }
+}
+
+.c-text p + p {
+  margin-top: 20%;
+}
+
+.c-text02 p {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .c-text02 p {
+    font-size: 20px;
+  }
+}
+
+.c-text02 h5 {
+  text-align: center;
+  font-size: 84px;
+  line-height: 1.1;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 769px) {
+  .c-text02 h5 {
+    font-size: 40px;
+  }
+}
+
+.c-text03 p {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 769px) {
+  .c-text03 p {
+    margin-top: 40px;
+  }
+}
+
+.c-content {
+  padding: 10.5% 0;
+  background-image: url(../images/bg-06.png);
+  background-size: 100% auto;
+}
+
+.c-content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 32%;
+  padding: 0 20px;
+}
+
+.c-content__text p {
+  color: #fff;
+  font-size: 28px;
+  line-height: 2.8;
+}
+
+@media screen and (max-width: 769px) {
+  .c-content__text p {
+    font-size: 16px;
+  }
+}
+
+.c-content__title {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  line-height: 2.8;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 769px) {
+  .c-content__title {
+    font-size: 20px;
+  }
+}
+
+.c-content__image {
+  padding: 3.5% 0;
+}
+
+.c-content__image img {
+  width: 100%;
+}
+
+.c-content__hack {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c-content__hack a {
+  display: block;
+}
+
+.c-content__hack a img {
+  max-width: 100%;
+}
+
+.c-content__hack a:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 769px) {
+  .c-content__hack--btn {
+    width: 80%;
+    padding: 20px;
+  }
+}

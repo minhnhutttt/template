@@ -12,7 +12,10 @@
   box-sizing: border-box;
   *behavior: url(/scripts/boxsizing.htc);
 }
-
+@font-face {
+  font-family: Hiragino;
+  src: url(../fonts/HiraginoMinchoProW6.otf);
+}
 /* 全体構成
 ---------------------------------------------------------------- */
 html{
@@ -26,9 +29,9 @@ body{
   font-size:14px;
   color:#202020;
   min-width: 320px;
-  line-height:160%;
+  line-height: 1.6;
   /*スマホ対応*/
-   font-family: 'Noto Serif JP', serif;
+   font-family: 'Hiragino', serif;
   -webkit-text-size-adjust:100%;
   text-size-adjust:100%;
   overflow-y: scroll; /*ローディングのガタツキ防止*/
