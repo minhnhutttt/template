@@ -476,3 +476,24 @@ a {
         }
     }
 }
+
+.c-articles {
+    margin-top: 65px;
+}
+.c-article {
+    &__flex {
+        display: flex;
+        justify-content: center;
+    }
+    &__main {
+        &--ttl {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 56px;
+            line-height: 1;
+            span {
+                font-size: 104px;
+                display: inline-block;
+            }
+        }
+    }
+}

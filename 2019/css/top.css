@@ -569,3 +569,27 @@ a {
 .c-strengths__txt p span {
   color: #6bdbe5;
 }
+
+.c-articles {
+  margin-top: 65px;
+}
+
+.c-article__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.c-article__main--ttl {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 56px;
+  line-height: 1;
+}
+
+.c-article__main--ttl span {
+  font-size: 104px;
+  display: inline-block;
+}
