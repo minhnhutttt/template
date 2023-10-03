@@ -230,3 +230,318 @@ a {
     -ms-transition: 0.5s;
     transition: 0.5s;
 }
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 88.28125%;
+    max-width: 1130px;
+    @media screen and (max-width: 767px) {
+        width: 88.88889%;
+    }
+}
+
+.l-header {
+    background: rgba(255, 255, 255, 1);
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    border-bottom: 3px solid #59c6a9;
+    @media screen and (max-width: 1200px) {
+        background: #ffffff;
+        height: 60px;
+        line-height: 60px;
+    }
+    &__inner {
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        width: 88.28125%;
+        max-width: 1130px;
+        height: 100%;
+        @media screen and (max-width: 1200px) {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+        }
+    }
+    &__logo {
+        display: flex;
+        @media screen and (max-width: 1200px) {
+            position: relative;
+            height: 100%;
+            padding-left: 22px;
+        }
+        a {
+            color: #707070;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            word-wrap: break-word;
+            @media screen and (max-width: 1200px) {
+                line-height: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+.c-pageHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9f4ec;
+    color: #242424;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    p {
+        text-align: center;
+    }
+}
+
+.c-form {
+    margin-bottom: 80px;
+    &__txt {
+        padding: 1rem 2rem;
+        line-height: 2.4;
+        background-color: #c7eee4;
+        font-size: larger;
+        margin-bottom: 31px;
+        &.txt-02 {
+            font-size: 16px;
+            margin: 0 0 55px;
+            background: none;
+        }
+    }
+    &__step {
+        line-height: 1.4;
+        padding-bottom: 24.2px;
+        color: #4cac92;
+        font-size: 130%;
+        font-weight: bold;
+        border-bottom: 3px solid #4cac92;
+        margin-bottom: 45px;
+    }
+    &__radio {
+        display: flex;
+        margin-bottom: 60px;
+        @media screen and (max-width: 781px) {
+            flex-wrap: wrap;
+            gap: 31px;
+        }
+        & > * {
+            width: 50%;
+            @media screen and (max-width: 781px) {
+                width: 100%;
+            }
+        }
+        input {
+            display: none;
+        }
+        
+        input:checked + span {
+            background: #59C6A9;
+            color: #FFF;
+        }
+        .wpcf7-form-control.wpcf7-radio {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wpcf7-list-item {
+            width: 50%;
+            max-width: 282px;
+            @media screen and (max-width: 781px) {
+                max-width: 100%;
+            }
+        }
+        &.is-odd {
+            .wpcf7-list-item.last {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .wpcf7-list-item-label {
+            display: block;
+            background: #EFEFEF;
+            color: #242424;
+            padding: 15px;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+    &__checkbox {
+        margin-bottom: 80px;
+        .wpcf7-form-control {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+        .wpcf7-list-item {
+            @media screen and (min-width: 782px) {
+                flex-basis: 0;
+                flex-grow: 1;
+            }
+            @media screen and (max-width: 781px) {
+                width: 100%;
+            }
+        }
+        .wpcf7-list-item-label {
+            &:after {
+                content: '';
+                display: block;
+                background-size: cover;
+                width: 358px;
+                aspect-ratio: 179 / 160;
+                @media screen and (max-width: 781px) {
+                    width: 100%;
+                }
+            }
+        }
+        .wpcf7-list-item:nth-child(1) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-21@4x-1024x921.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-1@4x-1-1024x920.png');
+            }
+        }
+        .wpcf7-list-item:nth-child(2) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-20@4x-1-1024x921.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%83%81%E3%83%A7%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%AF%E3%82%99-1024x920.png');
+            }
+        }
+        .wpcf7-list-item:nth-child(3) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-19@4x-1024x921.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%AB%E3%83%92%E3%82%99%E3%83%BB%E3%82%B3%E3%82%B1-1024x920.png');
+            }
+        }
+        .wpcf7-list-item:nth-child(4) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-18@4x-768x691.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%B3%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%AF%E3%82%99-1024x920.png');
+            }
+        }
+        .wpcf7-list-item:nth-child(5) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-17@4x-1024x921.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E9%8C%86%E3%81%B2%E3%82%99-1024x920.png');
+            }
+        }
+        .wpcf7-list-item:nth-child(6) {
+            input:checked + .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88-16@4x-1024x921.png');
+            }
+            .wpcf7-list-item-label:after {
+                background-image: url('https://lp-ad.starpaint.jp/price_simulation/wp-content/uploads/2022/08/%E3%81%B2%E3%81%B2%E3%82%99%E5%89%B2%E3%82%8C-1024x920.png');
+            }
+        }
+    }
+    &__box {
+        padding: 1.5em 3em;
+        margin: 2em 0 80px;
+        font-weight: 1px;
+        color: #B9B9B9;
+        background: #FFF;
+        border: solid 1px #B9B9B9;
+        border-radius: 0px;
+        &--flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+        &--item {
+            @media screen and (min-width: 782px) {
+                flex-basis: 0;
+                flex-grow: 1;
+            }
+            @media screen and (max-width: 781px) {
+                width: 100%;
+            }
+            > p {
+                small {
+                    color: #E71F19;
+                }
+            }
+            .wpcf7-form-control-wrap {
+                margin: 2em 0;
+                display: block;
+                input {
+                    padding: 1.5em 3em;
+                    border-radius: 10px;
+                    width: 100%;
+                    border: solid 1px #B9B9B9;
+                    font-weight: 1px;
+                    color: #E3E3E3;
+                    background: #FFF;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &--note {
+            font-size: 13px;
+        }
+    }
+    &__submit {
+        display: flex;
+        justify-content: center;
+        input {
+            color: #fff;
+            border-radius: 100px;
+            background-color: #D8281D;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            word-break: break-word;
+            border: none;
+        }
+    }
+}
+
+.p-copyright {
+    background: #000;
+    p {
+        color: #fff;
+        font-size: 80%;
+        height: 55px;
+        line-height: 55px;
+        overflow: hidden;
+        text-align: right;
+        @media screen and (max-width: 781px) {
+            font-size: 80%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    }
+}
